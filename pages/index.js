@@ -1,17 +1,22 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Layout from '../components/layout';
 
 export default function Home() {
   return (
-    <div className="container">
+    <Layout>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Learn <a href="https://nextjs.org">Next.js!</a>
+          Read{' '}
+          <Link href="/posts/first-post">
+            <a>this page!</a>
+          </Link>
         </h1>
+        
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>
@@ -46,7 +51,6 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
 
       <footer>
         <a
@@ -204,6 +208,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </Layout>
   )
 }
