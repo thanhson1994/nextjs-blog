@@ -9,6 +9,9 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+        <h1>
+          ABC
+        </h1>
         <h1 className="title">
           Learn <a href="https://nextjs.org">Next.js!</a>
           Read{' '}
