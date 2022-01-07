@@ -21,7 +21,13 @@ export default function FirstPost({data}) {
         {
             todos.map(item => 
             <div> 
-                {item.id} {item.title} 
+                <span>
+                  Id: {item.id}
+                </span>
+                <span>
+                  Title: {item.title}
+                </span>
+                
                 <Link href= {`/posts/${item.id}`} > 
                     View Detail
                 </Link>
