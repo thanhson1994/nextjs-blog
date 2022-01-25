@@ -18,6 +18,7 @@ export default function FirstPost({data}) {
         <title>First Post</title>
         </Head>
         <h1> First Post </h1>
+        <div data-testid="posts-list">
         {
             todos.map(item => 
             <div> 
@@ -25,17 +26,19 @@ export default function FirstPost({data}) {
                   Id: {item.id}
                 </span>
                 <span>
-                  Title: {item.title}
+                  {item.title}
                 </span>
                 
                 <Link href= {`/posts/${item.id}`} > 
                     View Detail
                 </Link>
-                <button onClick= { () => handleDeteleTodo(item.id)}>
+                <button data-testid= { item.title } onClick= { () => handleDeteleTodo(item.id)}>
                     Delete
                 </button>
             </div>)
         }
+        </div>
+        
         <h2>
           <Link href="/">
             <a>Back to home</a>
